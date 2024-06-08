@@ -9,5 +9,3 @@ Php Native
 <p>Halaman Utama</p>
 <p>Add Dokter</p>
 <p>Informasi Kesehatan</p>
-
-<p2>Pasien</p2>
