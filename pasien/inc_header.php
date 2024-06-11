@@ -9,24 +9,19 @@ include("config.php");
 if (isset($_POST['submit'])) {
   $email = mysqli_real_escape_string($con, $_POST['email']);
   $password = mysqli_real_escape_string($con, $_POST['password']);
-  $result = mysqli_query($con, "SELECT * FROM dokter WHERE email='$email'AND password='$password'") or die("select error");
+  $result = mysqli_query($con, "SELECT * FROM user WHERE email='$email'AND password='$password'") or die("select error");
   $row = mysqli_fetch_assoc($result);
 
   if (is_array($row) && !empty($row)) {
     $_SESSION['valid'] = $row['email'];
+    $_SESSION['username'] = $row['username'];
     $_SESSION['id'] = $row['id'];
-    $_SESSION['email'] = $row['email'];
-    $_SESSION['password'] = $row['password'];
     $_SESSION['nama'] = $row['nama'];
     $_SESSION['no_telp'] = $row['no_telp'];
-    $_SESSION['alamat'] = $row['alamat'];
-    $_SESSION['tanggal_lahir'] = $row['tanggal_lahir'];
-    $_SESSION['spesialis'] = $row['spesialis'];
-    $_SESSION['pengalaman'] = $row['pengalaman'];
+    $_SESSION['umur'] = $row['umur'];
+    $_SESSION['password'] = $row['password'];
+    $_SESSION['email'] = $row['email'];
     $_SESSION['jenis_kelamin'] = $row['jenis_kelamin'];
-    $_SESSION['tanggal_masuk'] = $row['tanggal_masuk'];
-    $_SESSION['foto'] = $row['foto'];
-    $_SESSION['isi'] = $row['isi'];
   } else {
     echo "<div class='messege'>
                 <p>Wrong Username or Password!</p>
@@ -116,7 +111,7 @@ if (isset($_POST['submit'])) {
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="index.php" class="nav-link px-2 text-white">Dokter</a></li>
+          <li><a href="index.php" class="nav-link px-2 text-white">Home</a></li>
           <li><a href="profile.php" class="nav-link px-2 text-white">Profile</a></li>
           <li><a href="konsultasi.php" class="nav-link px-2 text-white">Konsultasi</a></li>
           <li><a href="logout.php" class="nav-link px-2 text-white">Logout</a></li>

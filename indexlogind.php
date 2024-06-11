@@ -109,9 +109,19 @@ session_start();
 
         if (is_array($row) && !empty($row)) {
           $_SESSION['valid'] = $row['email'];
-          $_SESSION['username'] = $row['username'];
           $_SESSION['id'] = $row['id'];
+          $_SESSION['email'] = $row['email'];
+          $_SESSION['password'] = $row['password'];
           $_SESSION['nama'] = $row['nama'];
+          $_SESSION['no_telp'] = $row['no_telp'];
+          $_SESSION['alamat'] = $row['alamat'];
+          $_SESSION['tanggal_lahir'] = $row['tanggal_lahir'];
+          $_SESSION['spesialis'] = $row['spesialis'];
+          $_SESSION['pengalaman'] = $row['pengalaman'];
+          $_SESSION['jenis_kelamin'] = $row['jenis_kelamin'];
+          $_SESSION['tanggal_masuk'] = $row['tanggal_masuk'];
+          $_SESSION['foto'] = $row['foto'];
+          $_SESSION['isi'] = $row['isi'];
         } else {
           echo "<div class='messege'>
                 <p>Wrong Username or Password!</p>
