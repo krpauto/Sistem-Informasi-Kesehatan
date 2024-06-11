@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="alert alert-primary mt-4" role="alert">
-    Selamat Datang, Dokter <?php echo $_SESSION['nama'] ?>
+    Selamat Datang, <?php echo $_SESSION['nama'] ?>
   </div>
 </div>
 
