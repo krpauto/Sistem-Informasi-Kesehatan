@@ -22,7 +22,7 @@ include_once("inc/inc_fungsi.php");
           <li><a href="<?php echo url_dasar() ?>#Informasi_Kesehatan">Informasi Kesehatan</a></li>
           <li><a href="<?php echo url_dasar() ?>#Cek_kesehatan">Cek Kesehatan</a></li>
           <li><a href="<?php echo url_dasar() ?>#Konsultasi">Konsultasi</a></li>
-          <li><a href="<?php echo url_dasar() ?>#contact">Contact</a></li>
+          <li><a href="<?php echo url_dasar() ?>#contact">Kontak</a></li>
           <li><a href="Vlogin.php" class="tbl-biru">Login</a></li>
         </ul>
       </div>
